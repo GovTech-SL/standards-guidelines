@@ -1,0 +1,19 @@
+# macOS
+.DS_Store
+
+# Generated artefacts. The Markdown source under /docs is the authoritative
+# version of every document. DOCX, PDF, and HTML outputs are produced from
+# Markdown for formal publication only and shall not be committed.
+*.docx
+*.pdf
+*.html
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Claude Code agent files (local authoring aid, not policy content)
+CLAUDE.md
+.claude/
