@@ -100,7 +100,7 @@ Two responsibilities:
 
 ### 5.2 Comment exporter (`exportReviewComments`)
 
-- Added as a menu item: **Extensions → GovTech Review → Export Review Comments**.
+- Added as a menu item: **GovTech Review > Export Review Comments**. Apps Script can only add top-level document menus; nesting under Extensions is not available via the API.
 - Walks every comment thread via the Drive API (`Drive.Comments.list`).
 - For each thread, captures:
   - Quoted (anchored) text from the doc.
@@ -180,7 +180,7 @@ No changes to existing policy documents are required. The workflow is purely add
 1. **Generate.** Author runs the `md-to-gdoc-script` prompt against the target `.md`. Pastes the resulting `.gs` into a new Apps Script project bound to a new Google Doc. Runs `buildDocFromManifest`. The doc lands in `Review Drafts/<DOC-ID>/`.
 2. **Distribute.** Author sets sharing to "Anyone with link: commenter" (or specific reviewers, depending on classification). Sends the link with the deadline shown in the banner.
 3. **Review.** Reviewers comment in-place. The doc is not edited; the banner reminds them anchors are machine identifiers.
-4. **Export.** At deadline, author runs **Extensions → GovTech Review → Export Review Comments**. Downloads the resulting `.md` file.
+4. **Export.** At deadline, author runs **GovTech Review > Export Review Comments** from the doc's menu bar. Downloads the resulting `.md` file.
 5. **Apply.** Author runs the `gdoc-comments-to-md-revision` prompt with both files. Reviews the proposed diff, edits as needed, applies.
 6. **Close out.** Author commits the revised `.md` with a message of the form `<DOC-ID>: apply review round <N> (X addressed, Y deferred)`. Marks comments resolved in the Google Doc. If another round is needed, the author creates a **new** Google Doc for round `N+1` (new file, new sharing link, banner updated, anchors regenerated from the revised Markdown). The round-`N` doc is retained read-only for audit. This avoids stale comments and anchor drift inside a single doc.
 

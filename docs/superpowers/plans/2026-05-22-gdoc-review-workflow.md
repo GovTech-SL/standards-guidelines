@@ -740,7 +740,7 @@ This workflow lets non-Git reviewers (Cabinet, line ministries, legal counsel, e
    - Author monitors for blocking questions but does not engage in side debates inside the doc.
 
 4. **Export.**
-   - At the deadline, the author opens the doc, clicks Extensions, GovTech Review, Export Review Comments.
+   - At the deadline, the author opens the doc and clicks **GovTech Review > Export Review Comments** from the document's menu bar. (Apps Script adds the menu at the top level; it cannot nest under the Extensions menu.)
    - A `.md` file is written into the same `Review Drafts/<DOC-ID>/` folder.
    - Author downloads the file to a local scratch path (not committed to the repo by default).
 
