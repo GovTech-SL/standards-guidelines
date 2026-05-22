@@ -18,6 +18,7 @@ Before emitting any output, scan the source `.md` and refuse with a line-numbere
 - Em dash character anywhere in body text (not in code fences or tables of cited symbols).
 - Banned phrases (case-insensitive): "it is worth noting", "it is important to note", "furthermore", "moreover", "in conclusion", "it should be noted", "this ensures that", "by doing so", "in order to", "with respect to".
 - Banned vocabulary (case-insensitive, whole-word): "robust", "leverage", "utilise", "facilitate", "streamline", "holistic", "cutting-edge", "best-in-class", "straightforward", "ensure that".
+- Obligation softeners used in place of `shall`, `should`, or `may` (case-insensitive, whole-word): "consider", "look to", "seek to", "aim to". Flag every occurrence; the author confirms each whether the use is legitimate (e.g. "the committee will consider the submission") or a softening of an obligation (a violation).
 
 Report format on refusal:
 ```
@@ -37,13 +38,14 @@ A single fenced block of Google Apps Script (`.gs`) the author pastes as a secon
 ## Mapping rules
 
 - **Front matter** (`**Document ID:** ...`, etc.) populates the manifest cover fields.
+- **Missing front matter.** If a required field is absent from the source (e.g. `GOV-001` omits `Pillar`; an early draft may omit `Date`), use an empty string `""` for that field in the manifest and append a JavaScript line comment on the same line flagging it, e.g. `pillar: "", // not present in source - verify before sending`. Never emit `undefined` or `null` for cover fields.
 - **Review round and due date** are taken from the invocation args, not from the source.
-- **Headings (`#`, `##`, `###`, ...)** become `{ type: "heading", level, number, text, anchor }`. Numbering is derived by walking the heading tree (`1`, `1.1`, `1.2`, `2`, ...). The anchor is `<DOC-ID>-S<number>`.
-- **Paragraphs** become `{ type: "paragraph", text }`. Convert inline markdown (`**bold**`, `*italic*`, links) to plain text; styling is applied by the scaffold defaults. Inline code stays in backticks but is rendered as plain text.
-- **Bullet or numbered lists** become `{ type: "list", style, items: [...] }`. Nested lists are flattened to a single level with leading `"  "` indentation prepended to nested items (Apps Script's bullet handling is simpler than markdown's).
-- **Tables** become `{ type: "table", rows, hasHeader: true }`. First row is the header.
-- **Fenced code blocks** become `{ type: "code", lang, text }`.
-- **Blocks beginning with `> **Extension Point**`** or a heading containing the words "Extension Point" produce `{ type: "extensionPoint", title, body }`. Body is the paragraph(s) until the next heading.
+- **Headings.** The source `.md`'s top-level `#` heading is the document title; it is already rendered by the scaffold's cover block from the `title` front-matter field and MUST NOT be emitted as a block. Body headings start at `##`. Map markdown depth to manifest `level` as: `##` -> `level: 1`, `###` -> `level: 2`, `####` -> `level: 3`, `#####` -> `level: 4`, `######` -> `level: 5`. Each emitted heading becomes `{ type: "heading", level, number, text, anchor }`. Numbering is derived by walking the heading tree from the first `##` (`1`, `1.1`, `1.2`, `2`, ...). The anchor is `<DOC-ID>-S<number>` and only heading blocks carry an anchor; paragraph, list, table, code, and extension-point blocks inherit the anchor of the nearest preceding heading for review-comment purposes.
+- **Paragraphs** become `{ type: "paragraph", text }`. Strip inline markdown markers (`**`, `*`, backticks, `[text](url)` link syntax keeping only the visible text) to produce plain text. The scaffold does not apply character-level bold, italic, or link formatting in paragraphs; rich text in body paragraphs is not supported in this output path.
+- **Bullet or numbered lists** become `{ type: "list", style, items: [...] }`. The outer list's marker style sets `style` for the entire flattened block. Nested items are flattened to a single level with leading `"  "` indentation prepended; if a nested level uses a different marker style from its parent, that distinction is lost in the rendered Google Doc (a known limitation). Each list item must be a single string; multi-paragraph items are concatenated with a single space.
+- **Tables** become `{ type: "table", rows, hasHeader }`. `hasHeader` is `true` if the markdown table has a separator row (`| --- |`), `false` otherwise. If `hasHeader` is `true`, the first row is the header.
+- **Fenced code blocks** become `{ type: "code", lang, text }`. The `lang` field is captured for completeness; the current scaffold does not apply syntax-specific styling, so `lang` is descriptive only.
+- **Extension Points.** Two source forms produce an `extensionPoint` block. (a) A heading whose text contains "Extension Point" (any level) is consumed entirely as the block's `title`; no sibling heading block is emitted; the `body` is the concatenation of paragraphs that follow until the next heading. (b) A blockquote that begins `> **Extension Point**` under a non-Extension-Point heading produces an `extensionPoint` block whose `title` is "Extension Point" and whose `body` is the remainder of the blockquote; the preceding heading is still emitted as its own heading block. Form (a) takes precedence: if a heading contains "Extension Point", do not also process a blockquote inside that section as a separate extensionPoint block; merge it into the title's `body`.
 
 ## Output template
 
