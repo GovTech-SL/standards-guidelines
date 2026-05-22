@@ -108,7 +108,7 @@ function writeReviewBanner(body, m) {
     FONT_SIZE: 11
   });
   body.appendParagraph(
-    "Anchor codes such as [ARC-001-S4.2] are machine identifiers. " +
+    "Anchor codes (example: ARC-001-S4.2) are machine identifiers. " +
     "Do not edit them."
   ).setAttributes({ ITALIC: true, FONT_SIZE: 9 });
   body.appendHorizontalRule();
@@ -217,27 +217,41 @@ function onOpen() {
  * project (Services, Drive API, v3).
  */
 function exportReviewComments() {
-  const doc = DocumentApp.getActiveDocument();
-  const fileId = doc.getId();
+  try {
+    const doc = DocumentApp.getActiveDocument();
+    const fileId = doc.getId();
 
-  const threads = Drive.Comments.list(fileId, {
-    fields: "comments(id,content,author/displayName,createdTime,resolved," +
-            "quotedFileContent/value,replies(content,author/displayName,createdTime))",
-    pageSize: 100,
-    includeDeleted: false
-  }).comments || [];
+    const threads = [];
+    let pageToken = null;
+    do {
+      const params = {
+        fields: "nextPageToken,comments(id,content,author/displayName,createdTime,resolved," +
+                "quotedFileContent/value,replies(content,author/displayName,createdTime))",
+        pageSize: 100,
+        includeDeleted: false
+      };
+      if (pageToken) params.pageToken = pageToken;
+      const res = Drive.Comments.list(fileId, params);
+      if (res.comments) {
+        for (const c of res.comments) threads.push(c);
+      }
+      pageToken = res.nextPageToken || null;
+    } while (pageToken);
 
-  const anchorIndex = buildAnchorIndex(doc);
-  const lines = formatExport(doc, threads, anchorIndex);
+    const anchorIndex = buildAnchorIndex(doc);
+    const lines = formatExport(doc, threads, anchorIndex);
 
-  const filename = buildExportFilename(doc);
-  const folder = getDocFolder(fileId);
-  const file = folder.createFile(filename, lines.join("\n"), "text/markdown");
+    const filename = buildExportFilename(doc);
+    const folder = getDocFolder(fileId);
+    const file = folder.createFile(filename, lines.join("\n"), "text/markdown");
 
-  DocumentApp.getUi().alert(
-    "Exported " + threads.length + " comment thread(s) to:\n\n" +
-    file.getUrl()
-  );
+    DocumentApp.getUi().alert(
+      "Exported " + threads.length + " comment thread(s) to:\n\n" +
+      file.getUrl()
+    );
+  } catch (e) {
+    DocumentApp.getUi().alert("Export failed: " + e.message);
+  }
 }
 
 /** Map every anchor occurrence in the body text to its character offset. */
