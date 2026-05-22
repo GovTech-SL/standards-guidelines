@@ -28,7 +28,7 @@ This workflow lets non-Git reviewers (Cabinet, line ministries, legal counsel, e
    - Open https://script.google.com, create a new project.
    - Paste `docs/_gdoc-template.gs` as `Code.gs`.
    - Paste the prompt output as `Manifest.gs`.
-   - Enable Services, Drive API v3.
+   - Enable the Drive Advanced Service: in the left sidebar of the Apps Script editor, click the **+** next to **Services**, choose **Drive API**, leave version at **v3**, and click Add.
    - Run `main`. The Google Doc lands in `Review Drafts/<DOC-ID>/`.
 
 2. **Distribute.**
@@ -65,6 +65,5 @@ This workflow lets non-Git reviewers (Cabinet, line ministries, legal counsel, e
 ## First-run checklist for an author
 
 - [ ] Source `.md` passes the prompt's pre-flight (no em dashes, no banned phrases).
-- [ ] `Review Drafts/<DOC-ID>/` exists in your Drive (created automatically on first run).
-- [ ] Drive Advanced Service is enabled in the Apps Script project.
+- [ ] Drive Advanced Service (Drive API v3) is enabled in the Apps Script project. The `Review Drafts/<DOC-ID>/` folder is created by `main` on first run; do not pre-create it.
 - [ ] You can read `_gdoc-template.gs` and the per-document manifest end-to-end before running `main`.
