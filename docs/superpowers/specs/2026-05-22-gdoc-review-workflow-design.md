@@ -106,19 +106,17 @@ Two responsibilities:
   - Quoted (anchored) text from the doc.
   - The enclosing section anchor (resolved by walking back from the comment's start index to the most recent anchor bookmark).
   - Reviewer name, timestamp, comment body, all replies, resolution status.
-- Writes a single Markdown file `<DOC-ID>_review_R<N>_<YYYY-MM-DD>.md` to the same Drive folder. Author downloads it and drops it into the repo working tree (not committed; treated as a scratch artifact unless the team decides otherwise later).
+- Writes a single Markdown file `<doc-name>_review_<YYYY-MM-DD>.md` to the same Drive folder, where `<doc-name>` is the sanitised Google Doc title (e.g. `ARC-001_v0.3__Round_1_`). Author downloads it and drops it into the repo working tree (not committed; treated as a scratch artifact unless the team decides otherwise later). A future revision may upgrade the filename to `<DOC-ID>_review_R<N>_<YYYY-MM-DD>.md` once the doc-builder stamps `docId`, `version`, and `round` into document properties via `PropertiesService`; this is not implemented in v1.
 
 ### 5.3 Export file format
 
-```markdown
-# Review Export: ARC-001 Round 1
+The v1 export format is intentionally minimal: the file header carries only the export timestamp and aggregate counts, since the bound Apps Script does not have access to the manifest at export time. Reviewer identity and per-comment metadata are captured in the per-comment blocks. A future revision may upgrade the header to include `Document`, `Doc Version (at review)`, `Round`, and a deduplicated reviewer list once the manifest fields are persisted via `PropertiesService`.
 
-**Document:** ARC-001 Enterprise Architecture Reference Model
-**Doc Version (at review):** 0.3
-**Round:** 1
-**Exported:** 2026-05-22 14:30 +0530
-**Reviewers:** (list of distinct reviewer names)
-**Comment counts:** open 12 · resolved 4 · total 16
+```markdown
+# Review Export: ARC-001 v0.3 (Round 1)
+
+**Exported:** 2026-05-22T09:00:00.000Z
+**Total comments:** 16 (open 12, resolved 4)
 
 ---
 
@@ -127,12 +125,15 @@ Two responsibilities:
 **Anchor text:**
 > Government agencies shall publish APIs through the NDX gateway.
 
-**Reviewer:** S. Perera (Legal)  ·  2026-05-18 09:14
+**Reviewer:** S. Perera  ·  2026-05-18T09:14:00.000Z
+
 **Comment:**
+
 Does this cover diplomatic missions? PDPA carve-out applies.
 
 **Replies:**
-- R. Fernando (Standards) 2026-05-19: Will defer to legal team.
+
+- R. Fernando 2026-05-19T...: Will defer to legal team.
 
 ---
 ```
