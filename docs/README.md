@@ -103,6 +103,7 @@ Changes to any document shall be submitted as a pull request and reviewed by the
 |---|---|---|---|
 | GOV-001 | GovTech Master Governance Policy | Apex | [/docs/Master_Governance_Policy.md](Master_Governance_Policy.md) |
 | ARC-001 | Enterprise Architecture Reference Model | Architecture | [/docs/architecture/ARC-001...](architecture/ARC-001_Enterprise_Architecture_Reference_Model.md) |
+| DAT-001 | Data Classification and Handling Policy | Data | [/docs/data/DAT-001...](data/DAT-001_Data_Classification_Handling_Policy.md) |
 
 ### Planned
 
@@ -130,7 +131,6 @@ Changes to any document shall be submitted as a pull request and reviewed by the
 | SEC-004 | Incident Response and Breach Notification | Security |
 | SEC-005 | Identity and Access Management (SL-UDI) | Security |
 | SEC-006 | Cryptography and Key Management Standard | Security |
-| DAT-001 | Data Classification and Handling Policy | Data |
 | DAT-002 | Master Data Management Standard | Data |
 | DAT-003 | Data Interoperability and Exchange (NDX) | Data |
 | DAT-004 | Data Retention and Disposal Policy | Data |
