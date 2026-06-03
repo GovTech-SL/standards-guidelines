@@ -174,7 +174,7 @@ Governs how data is classified, handled, exchanged, retained, and published acro
 
 | Doc ID | Title | Status |
 |---|---|---|
-| **DAT-001** | Data Classification and Handling Policy | Planned |
+| **DAT-001** | Data Classification and Handling Policy | Draft |
 | **DAT-002** | Master Data Management Standard | Planned |
 | **DAT-003** | Data Interoperability and Exchange (NDX) | Planned |
 | **DAT-004** | Data Retention and Disposal Policy | Planned |
