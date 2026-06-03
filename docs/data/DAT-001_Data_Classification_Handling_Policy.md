@@ -86,7 +86,7 @@ The following principles are binding on all parties subject to this policy.
 
 #### 4.1.1 Five Security Classification Levels
 
-GovTech adopts the five-level classification scheme of the ICTA Information Classification Policy for Government Organizations. The five levels, their identifying colours, definitions, and representative examples are set out below.
+GovTech Sri Lanka establishes a five-level information classification scheme as the national standard for government information. The five levels, their identifying colours, definitions, and representative examples are set out below.
 
 | Data Class | Colour | Definition | Examples |
 |---|---|---|---|
@@ -110,7 +110,7 @@ The table below is the confidentiality dimension referenced by GOV-001 Section 6
 
 > **Extension Point: 4.1 Classification Scheme**
 >
-> **Default Recommendation.** ICTA Information Classification Policy for Government Organizations, Version 1.3 (September 2022), as adopted in Section 4.1.1 of this document.
+> **Default Recommendation.** The five-level GovTech Sri Lanka classification scheme defined in Section 4.1.1 of this document.
 >
 > **Permitted Alternative Pathway.** A party may substitute the default with an alternative, subject to all of the following:
 > - The alternative is itself grounded in a recognised international standard or documented industry best practice.
@@ -120,9 +120,9 @@ The table below is the confidentiality dimension referenced by GOV-001 Section 6
 >
 > **Approval Authority.** GovTech Standards and Policy Division.
 >
-> **Evidence Required at Approval.** A classification register extract showing how the proposed alternative scheme maps to the five ICTA classes, with explicit mapping of each alternative level to the corresponding Confidentiality Impact Level in the table above.
+> **Evidence Required at Approval.** A classification register extract showing how the proposed alternative scheme maps to the five classes defined in Section 4.1.1, with explicit mapping of each alternative level to the corresponding Confidentiality Impact Level in the table above.
 >
-> **Review Frequency.** Annual, or on publication of a revised edition of the ICTA classification standard.
+> **Review Frequency.** Annual, or on publication of a revised edition of the GovTech Sri Lanka classification standard.
 
 ---
 
@@ -130,7 +130,7 @@ The table below is the confidentiality dimension referenced by GOV-001 Section 6
 
 #### 4.2.1 Classification Process
 
-The Information Owner (or an authorised delegate) shall classify every information asset at the earliest possible opportunity, and no later than when the originator or Owner becomes aware of the asset's sensitivity. The classification process follows five steps derived from the ICTA classification framework:
+The Information Owner (or an authorised delegate) shall classify every information asset at the earliest possible opportunity, and no later than when the originator or Owner becomes aware of the asset's sensitivity. The classification process follows these five steps:
 
 1. **Identify the information asset.** The party creating or receiving the asset shall identify it as a discrete, nameable collection of data and enter it in the agency's information asset register.
 2. **Assign an Information Owner and a Custodian.** Each asset shall have a named Owner accountable for classification decisions and a named Custodian responsible for applying controls.
@@ -148,7 +148,7 @@ Only the originating organisation (or its successor on merger or abolition) may 
 
 > **Extension Point: 4.2 Classifying Information**
 >
-> **Default Recommendation.** ICTA Information Classification Policy for Government Organizations, Version 1.3 (September 2022), Sections 2.1, 2.2, and 3 (the five-step classification process).
+> **Default Recommendation.** The five-step classification process defined in Section 4.2.1 of this document.
 >
 > **Permitted Alternative Pathway.** A party may substitute the default with an alternative, subject to all of the following:
 > - The alternative is itself grounded in a recognised international standard or documented industry best practice.
@@ -158,7 +158,7 @@ Only the originating organisation (or its successor on merger or abolition) may 
 >
 > **Approval Authority.** GovTech Standards and Policy Division.
 >
-> **Evidence Required at Approval.** The documented information asset register showing Owner and Custodian assignments for all assets in scope; evidence that the alternative process produces a class determination equivalent to the ICTA five-step process for each asset class held.
+> **Evidence Required at Approval.** The documented information asset register showing Owner and Custodian assignments for all assets in scope; evidence that the alternative process produces a class determination equivalent to the five-step process in Section 4.2.1 for each asset class held.
 >
 > **Review Frequency.** Annual, aligned with the Information Owner's classification review cycle.
 
@@ -225,7 +225,7 @@ Retention periods and disposal procedures are governed by DAT-004 and are out of
 
 > **Extension Point: 4.4 Declassification and Review**
 >
-> **Default Recommendation.** Scheduled declassification review as defined in Section 4.4.1, aligned with the ICTA Information Classification Policy for Government Organizations, Version 1.3 (September 2022), Section 2.3.
+> **Default Recommendation.** Scheduled declassification review as defined in Section 4.4.1 of this document.
 >
 > **Permitted Alternative Pathway.** A party may substitute the default with an alternative, subject to all of the following:
 > - The alternative is itself grounded in a recognised international standard or documented industry best practice.

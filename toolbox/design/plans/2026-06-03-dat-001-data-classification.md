@@ -4,7 +4,7 @@
 
 **Goal:** Author DAT-001, the Data Classification and Handling Policy, as a single Markdown policy document that resolves the live dangling references in GOV-001 Section 6.2 and ARC-001 Section 4.2.
 
-**Architecture:** One master document under `docs/data/`, following the `docs/_template.md` layout and the canonical Extension Point block. It adopts the ICTA five-level classification scheme verbatim and maps it to the GOV-001 Impact Levels, adds an obligation-level handling matrix, and defers adjacent concerns to sibling documents. Two index files are updated to mark the document Draft.
+**Architecture:** One master document under `docs/data/`, following the `docs/_template.md` layout and the canonical Extension Point block. It adopts the GovTech Sri Lanka five-level classification scheme verbatim and maps it to the GOV-001 Impact Levels, adds an obligation-level handling matrix, and defers adjacent concerns to sibling documents. Two index files are updated to mark the document Draft.
 
 **Tech Stack:** Markdown, Git. No build or test toolchain. Quality gates are the repo prose-lint greps and cross-reference checks.
 
@@ -137,7 +137,7 @@ Expected: no matches.
 | Secret | 4 (Very High) |
 ```
 
-- [ ] **Step 3: Add the Extension Point block** (Default Recommendation: the ICTA Information Classification Policy for Government Organizations; Evidence: a classification register extract and the proposed alternative scheme with mapping to these five classes; Review Frequency: annual).
+- [ ] **Step 3: Add the Extension Point block** (Default Recommendation: the GovTech Sri Lanka classification scheme in Section 4.1.1; Evidence: a classification register extract and the proposed alternative scheme with mapping to these five classes; Review Frequency: annual).
 
 - [ ] **Step 4: Prose-lint (same grep).** Expected: no matches.
 
@@ -147,12 +147,12 @@ Expected: no matches.
 
 **Files:** Modify the document.
 
-- [ ] **Step 1: Write Section 4.2** adopting the ICTA process and roles:
+- [ ] **Step 1: Write Section 4.2** adopting the GovTech Sri Lanka classification process and roles:
   - The five-step process: identify the information asset; assign an Information Owner and a Custodian; assess impact across confidentiality, integrity, and availability; determine the class as the highest level reached; apply controls per Section 4.3.
   - Assigning: the Owner (or delegate) classifies at the earliest opportunity. Externally generated assets: the receiving officer ensures an Owner and Custodian are assigned and the asset is entered in the information asset register.
   - Altering: only the originating organisation (or its successor on merger or abolition) may alter a classification; a party that believes a classification is wrong shall query the originating organisation.
 
-- [ ] **Step 2: Add the Extension Point block** (Default Recommendation: the ICTA classification process; Evidence: the documented asset register and Owner/Custodian assignments; Review Frequency: annual).
+- [ ] **Step 2: Add the Extension Point block** (Default Recommendation: the classification process in Section 4.2.1; Evidence: the documented asset register and Owner/Custodian assignments; Review Frequency: annual).
 
 - [ ] **Step 3: Prose-lint (same grep).** Expected: no matches.
 

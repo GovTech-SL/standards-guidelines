@@ -246,7 +246,7 @@ All government ministries, departments, statutory bodies, and third-party vendor
 
 ### 6.2 System Impact Classification
 
-Every government digital system shall be assigned a System Impact Level. The Impact Level reflects the consequence of a breach of the system's confidentiality, integrity, or availability. GovTech adopts the national impact model defined in the ICTA Information Classification Policy for Government Organizations.
+Every government digital system shall be assigned a System Impact Level. The Impact Level reflects the consequence of a breach of the system's confidentiality, integrity, or availability. GovTech adopts the national four-level impact model set out below.
 
 | Impact Level | Designation | Consequence of compromise |
 |---|---|---|
@@ -309,7 +309,6 @@ This document is the parent of all documents listed in Section 4. The following 
 - ISO/IEC 27001:2022, Information Security Management
 - NIST Cybersecurity Framework 2.0
 - OWASP Application Security Verification Standard 4.0
-- ICTA Information Classification Policy for Government Organizations (source of the System Impact Classification model in Section 6.2)
 
 ---
 

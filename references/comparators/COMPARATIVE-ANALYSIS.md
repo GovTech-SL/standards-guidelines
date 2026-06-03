@@ -49,7 +49,7 @@ Three durable lessons emerge for Sri Lanka: (a) enforceability is almost never a
 
 ## 4. Data classification
 
-Sri Lanka's ICTA 5-level model (Unclassified, Public, Limited Sharing, Confidential, Secret) is **finer-grained** than the operational tiers peers use for hosting/security (Australia's 3 hosting levels; Singapore's risk profiles). That is a strength for policy expressiveness; the gap is the **data-element standardisation layer**. India pairs its classification with **MDDS** (Metadata and Data Standards: code directories, XML schemas for Person-Identification and common domains). Sri Lanka's Pillar 5 should reference an MDDS-style data-element standard so classification is matched by interoperable data definitions.
+The GovTech Sri Lanka 5-level model (Unclassified, Public, Limited Sharing, Confidential, Secret) is **finer-grained** than the operational tiers peers use for hosting/security (Australia's 3 hosting levels; Singapore's risk profiles). That is a strength for policy expressiveness; the gap is the **data-element standardisation layer**. India pairs its classification with **MDDS** (Metadata and Data Standards: code directories, XML schemas for Person-Identification and common domains). Sri Lanka's Pillar 5 should reference an MDDS-style data-element standard so classification is matched by interoperable data definitions.
 
 *Caveat:* no peer's data-classification scheme (as opposed to hosting/security risk tiers) was verified in detail for a like-for-like comparison. A targeted follow-up is needed to map level-for-level.
 
@@ -88,7 +88,7 @@ Recommended structure: anchor the integration-standards layer (ARC-005) in an **
 1. **Keep Markdown-in-Git; add an open license** (validated by Singapore's MIT repo) and **layer a machine-readable control encoding** (OSCAL or equivalent) over the prose for the enforceable parts.
 2. **Adopt a granular, risk-and-system-dependent enforcement classification** (combine India M/MW/O with Singapore Level 0/1/2), replacing any flat mandatory/advisory label.
 3. **Enforce through the existing procurement gate** (Pillar 2 / RFP framework), UK-style, rather than waiting on statute.
-4. **Add an MDDS-style data-element standard under Pillar 5** to back the ICTA classification model with interoperable definitions.
+4. **Add an MDDS-style data-element standard under Pillar 5** to back the GovTech Sri Lanka classification model with interoperable definitions.
 5. **Anchor NDX/GovPay/SL-UDI integration standards** in GovStack/X-Road building-block specs, framed as Extension Points against ARC-001's reference model.
 6. **Use Australia's 3-tier hosting model** as the spine of the planned ARC-003 Cloud and Hosting Policy.
 
@@ -106,7 +106,7 @@ Recommended structure: anchor the integration-standards layer (ARC-005) in an **
 
 1. IndEA **2.0** specifics vs v1.0, and whether it supersedes the 2010-2012 IFEG/MDDS catalogue.
 2. Structure and governance of **Estonia X-Road, Cambodia CamDX, and GovStack** building blocks (the most relevant DPI evidence for NDX/GovPay/SL-UDI, currently under-verified).
-3. **Level-for-level data-classification** mapping of the ICTA 5-level model against peer schemes (Singapore Government Data Security; UK GSCP; Australia PSPF).
+3. **Level-for-level data-classification** mapping of the GovTech Sri Lanka 5-level model against peer schemes (Singapore Government Data Security; UK GSCP; Australia PSPF).
 
 ---
 

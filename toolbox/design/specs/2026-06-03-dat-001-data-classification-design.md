@@ -13,14 +13,14 @@ Intended outcome: a concise, principle-based classification-and-handling policy 
 ## Decisions taken (brainstorming)
 
 1. **Scope: tight classification-and-handling core (approach A).** Adjacent concerns are deferred to siblings (see Boundaries).
-2. **Classification scheme: adopt the ICTA five levels verbatim** (Unclassified, Public, Limited Sharing, Confidential, Secret) and map them to the GOV-001 Impact Levels.
+2. **Classification scheme: adopt the GovTech Sri Lanka five levels verbatim** (Unclassified, Public, Limited Sharing, Confidential, Secret) and map them to the GOV-001 Impact Levels.
 3. **Handling controls: one concise obligation-level matrix in the document.** Cryptographic specifics defer to SEC-006; access and identity defer to SEC-005 and SEC-001.
 
 ## Classification scheme and Impact-Level mapping (Section 4.1)
 
-Adopt the five ICTA levels with their definitions and examples. Publish this mapping (the confidentiality dimension referenced by GOV-001 Section 6.2):
+Adopt the five GovTech Sri Lanka levels with their definitions and examples. Publish this mapping (the confidentiality dimension referenced by GOV-001 Section 6.2):
 
-| Data class | Colour (ICTA) | Confidentiality Impact Level |
+| Data class | Colour | Confidentiality Impact Level |
 |---|---|---|
 | Unclassified | White | Interim only; handled as Limited Sharing until assessed |
 | Public | Green | 1 (Low) |
