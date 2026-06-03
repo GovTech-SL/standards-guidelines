@@ -8,6 +8,10 @@
 *.pdf
 *.html
 
+# Reference source documents under references/ are authoritative external
+# inputs (not generated artefacts) and ARE committed.
+!references/**/*.pdf
+
 # Editor / IDE
 .vscode/
 .idea/

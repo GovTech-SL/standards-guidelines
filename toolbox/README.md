@@ -16,17 +16,19 @@ This workflow lets non-Git reviewers (Cabinet, line ministries, legal counsel, e
 
 | File | Purpose |
 |---|---|
-| `docs/_gdoc-template.gs` | Static Apps Script scaffold paired with every per-document manifest. |
+| `_gdoc-template.gs` | Static Apps Script scaffold paired with every per-document manifest. |
 | `prompts/md-to-gdoc-script.md` | Claude prompt: converts a policy `.md` into a per-document `.gs` manifest. |
 | `prompts/gdoc-comments-to-md-revision.md` | Claude prompt: converts a comment export plus the source `.md` into a diff. |
-| `docs/superpowers/specs/2026-05-22-gdoc-review-workflow-design.md` | The design rationale. |
+| `design/specs/2026-05-22-gdoc-review-workflow-design.md` | The design rationale. |
+
+> The `design/` folder holds the original spec and plan for this workflow. Some file paths inside them predate the toolbox reorganisation and are kept as a historical record.
 
 ## Six-phase workflow
 
 1. **Generate.**
    - Run the `md-to-gdoc-script` prompt with the source `.md`, the round number, and the due date.
    - Open https://script.google.com, create a new project.
-   - Paste `docs/_gdoc-template.gs` as `Code.gs`.
+   - Paste `_gdoc-template.gs` as `Code.gs`.
    - Paste the prompt output as `Manifest.gs`.
    - Enable the Drive Advanced Service: in the left sidebar of the Apps Script editor, click the **+** next to **Services**, choose **Drive API**, leave version at **v3**, and click Add.
    - Run `main`. The Google Doc lands in `Review Drafts/<DOC-ID>/`.

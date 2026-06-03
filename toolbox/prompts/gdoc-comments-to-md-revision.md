@@ -3,11 +3,11 @@
 ## When to invoke
 
 When the author runs:
-> "Use `prompts/gdoc-comments-to-md-revision.md` with the review export `<export.md>` and source `<source.md>`."
+> "Use `toolbox/prompts/gdoc-comments-to-md-revision.md` with the review export `<export.md>` and source `<source.md>`."
 
 ## Inputs
 
-1. **Review export path**, produced by `exportReviewComments()` in `docs/_gdoc-template.gs`.
+1. **Review export path**, produced by `exportReviewComments()` in `toolbox/_gdoc-template.gs`.
 2. **Source markdown path**, the same `.md` that was used to generate the doc under review.
 
 ## Workflow

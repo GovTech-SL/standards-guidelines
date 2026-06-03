@@ -3,7 +3,7 @@
 ## When to invoke
 
 When the author runs:
-> "Use `prompts/md-to-gdoc-script.md` to convert `docs/architecture/ARC-001_Enterprise_Architecture_Reference_Model.md` for review round N due YYYY-MM-DD."
+> "Use `toolbox/prompts/md-to-gdoc-script.md` to convert `docs/architecture/ARC-001_Enterprise_Architecture_Reference_Model.md` for review round N due YYYY-MM-DD."
 
 ## Inputs
 
@@ -32,7 +32,7 @@ Fix the source file and re-run.
 
 A single fenced block of Google Apps Script (`.gs`) the author pastes as a second file (e.g. `Manifest.gs`) in the Apps Script project that already contains `_gdoc-template.gs`. The output contains:
 
-1. A `MANIFEST` constant matching the schema documented at the top of `docs/_gdoc-template.gs`.
+1. A `MANIFEST` constant matching the schema documented at the top of `toolbox/_gdoc-template.gs`.
 2. A `main()` function that calls `buildDocFromManifest(MANIFEST)`.
 
 ## Mapping rules
@@ -53,7 +53,7 @@ A single fenced block of Google Apps Script (`.gs`) the author pastes as a secon
 /**
  * Per-document manifest for <DOC-ID> v<VERSION>, Round <N>.
  * Generated <YYYY-MM-DD> from <relative path to source .md>.
- * Pair with docs/_gdoc-template.gs in the same Apps Script project.
+ * Pair with toolbox/_gdoc-template.gs in the same Apps Script project.
  */
 
 const MANIFEST = {
