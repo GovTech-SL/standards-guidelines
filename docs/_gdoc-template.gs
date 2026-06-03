@@ -18,7 +18,7 @@
  *   pillar:       "4. Architecture Standards",
  *   issuedBy:     "GovTech Sri Lanka (Pvt) Ltd., Standards and Policy Division",
  *   date:         "May 2026",
- *   alignedWith:  "Sri Lanka 2030 Digital Blueprint",
+ *   alignedWith:  "Sri Lanka's Digital Economy Blueprint",
  *   review: {
  *     round:    1,
  *     dueDate:  "2026-06-12"

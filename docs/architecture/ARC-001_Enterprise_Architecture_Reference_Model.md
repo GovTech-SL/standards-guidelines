@@ -8,14 +8,14 @@
 **Parent Document:** [GOV-001: GovTech Master Governance Policy](../Master_Governance_Policy.md)  
 **Issued By:** GovTech Sri Lanka (Pvt) Ltd., Standards and Policy Division  
 **Date:** May 2026  
-**Aligned With:** Sri Lanka 2030 Digital Blueprint  
+**Aligned With:** Sri Lanka's Digital Economy Blueprint  
 
 ---
 
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-2. [Strategic Context: Sri Lanka 2030 Digital Blueprint](#2-strategic-context-sri-lanka-2030-digital-blueprint)
+2. [Strategic Context: Sri Lanka's Digital Economy Blueprint](#2-strategic-context-sri-lankas-digital-economy-blueprint)
 3. [Architecture Principles](#3-architecture-principles)
 4. [Enterprise Architecture Framework](#4-enterprise-architecture-framework)
 5. [Reference Architecture and Shared Building Blocks](#5-reference-architecture-and-shared-building-blocks)
@@ -44,7 +44,7 @@ This document applies to:
 - All government ministries, departments, and statutory bodies procuring or deploying digital systems
 - All shared infrastructure and national digital building blocks (SL-UDI, GovPay, NDX)
 
-Systems that are purely internal administrative tools with no public-facing component or inter-agency integration requirement may qualify for a simplified compliance pathway. Refer to [Section 7.3: Waiver Process](#73-waiver-process).
+Systems at Impact Level 1 that have no public-facing component and no inter-agency integration requirement may qualify for a simplified compliance pathway. Refer to [Section 7.3: Waiver Process](#73-waiver-process).
 
 ### 1.3 Intended Audience
 
@@ -60,42 +60,52 @@ Systems that are purely internal administrative tools with no public-facing comp
 |---|---|
 | EARM | Enterprise Architecture Reference Model: this document |
 | GovTech | GovTech Sri Lanka (Pvt) Ltd., the Government of Sri Lanka's lead implementation agency for national digital transformation |
-| SL-UDI | Sri Lanka Unified Digital Identity: the national digital identity infrastructure |
-| GovPay | Government Payment Gateway: the national payment processing platform |
-| NDX | National Data Exchange: the government data interoperability and exchange platform |
+| SL-UDI | Sri Lanka Unified Digital Identity: the national digital identity infrastructure, implementing the Blueprint's Unique Digital Identity |
+| GovPay | Government Payment Gateway: the national payment platform, implementing the Blueprint's Digital Payments |
+| NDX | National Data Exchange: the government data exchange platform, implementing the Blueprint's National (Federated) Data Exchange |
 | SBOM | Software Bill of Materials: a complete inventory of all software components, libraries, and licences in a system |
 | Extension Point | A formally defined mechanism allowing a party to substitute a GovTech default recommendation, subject to prior written approval |
 | Deviation Register | GovTech's central record of all approved Extension Point deviations |
+| Impact Level | The criticality of a system on a four-level scale (1 Low to 4 Very High), defined in GOV-001 Section 6.2 |
+| Enforcement Level | The obligation a requirement carries (Mandatory, Recommended, Optional, Prohibited), defined in GOV-001 Section 6.3 |
 | API | Application Programming Interface |
 | SDLC | Software Development Lifecycle |
 | TOGAF | The Open Group Architecture Framework |
-| 2030 Blueprint | Sri Lanka 2030 Digital Blueprint: the national digital transformation roadmap |
+| Digital Economy Blueprint | Sri Lanka's Digital Economy Blueprint: the national digital transformation roadmap to 2030 |
 | RTO | Recovery Time Objective: the maximum acceptable time to restore a system after a disruption |
 | RPO | Recovery Point Objective: the maximum acceptable data loss measured in time |
 
 ---
 
-## 2. Strategic Context: Sri Lanka 2030 Digital Blueprint
+## 2. Strategic Context: Sri Lanka's Digital Economy Blueprint
 
-### 2.1 Blueprint Pillars
+### 2.1 Blueprint Structure
 
-Sri Lanka's 2030 Digital Blueprint is the national roadmap for digital transformation, structured around five strategic pillars:
+Sri Lanka's Digital Economy Blueprint is the national roadmap for digital transformation to 2030. It is structured as an interconnected, layered framework rather than a set of parallel pillars.
 
-| Pillar | Strategic Objective |
+| Layer | Role |
 |---|---|
-| **Digital Infrastructure** | Establish resilient, high-availability digital infrastructure capable of supporting national-scale services |
-| **Digital Government** | Deliver seamless, citizen-centric government services accessible via unified digital channels |
-| **Digital Economy** | Enable a thriving digital economy through interoperable platforms and open data ecosystems |
-| **Digital Society** | Ensure inclusive digital participation for all Sri Lankans regardless of geography, language, or ability |
-| **Cybersecurity** | Protect national digital assets through sound security frameworks and proven cyber resilience capabilities |
+| **Digital Infrastructure** | Government, public, and private cloud and high-speed broadband networks that form the foundation. |
+| **Digital Public Infrastructure (DPI)** | Reusable, shared components that underpin every government service and approved private-sector application, including Unique Digital Identity, National (Federated) Data Exchange, and Digital Payments. |
+| **Platforms and Applications** | Platform-driven connections that link DPI to sectoral government and industry applications through open APIs. |
+| **Users and Touchpoints** | Citizens, businesses, and organisations accessing services through mobile, web, kiosk, and other channels. |
+
+Four enablers apply across every layer of the framework:
+
+| Enabler | Focus |
+|---|---|
+| **Inclusion** | Universal access, affordability, accessibility, and multilingual content in Sinhala, Tamil, and English. |
+| **Policy, Legislation, and Institutions** | The legal and institutional arrangements that move the Blueprint from vision to delivery. |
+| **Trust and Governance** | Cyber security, privacy, digital rights, and AI governance. |
+| **Capacity Building and Sustainability** | Digital skills, change management, and a sustainable innovation ecosystem. |
 
 ### 2.2 GovTech's Architectural Mandate
 
-GovTech is the primary delivery vehicle for the Digital Government and Digital Infrastructure pillars. The EARM translates the Blueprint's ambitions into actionable, enforceable architectural requirements.
+GovTech delivers and governs the Blueprint's Digital Infrastructure and Digital Public Infrastructure layers. The EARM translates the Blueprint's ambitions into enforceable architectural requirements.
 
 Every architecture decision made under this EARM shall be evaluated against the following questions:
 
-1. Does this architecture accelerate progress towards the 2030 Blueprint milestones?
+1. Does this architecture accelerate progress towards the Digital Economy Blueprint milestones?
 2. Does it promote reuse of shared national platforms (SL-UDI, GovPay, NDX)?
 3. Does it eliminate or reduce citizen interaction friction?
 4. Does it maintain or improve national data sovereignty?
@@ -191,9 +201,9 @@ The following integration patterns are approved for use in government systems. P
 | Pattern | Use Case | Notes |
 |---|---|---|
 | REST API (HTTPS) | Synchronous request-response | Mandatory for all public-facing service endpoints |
-| Event Streaming (via NDX) | Asynchronous, high-volume inter-agency data flows | Preferred for inter-agency data exchange |
-| GraphQL | Complex, client-driven queries | Permitted for internal dashboards and analytics interfaces |
-| Webhooks | Event notifications to external parties | Shall include signature verification and retry logic |
+| Event Streaming (via NDX) | Asynchronous, high-volume inter-agency data flows | Recommended for inter-agency data exchange |
+| GraphQL | Complex, client-driven queries | Optional for internal dashboards and analytics interfaces |
+| Webhooks | Event notifications to external parties | Optional; shall include signature verification and retry logic |
 
 > **Extension Point: Integration Patterns**
 >
@@ -208,10 +218,12 @@ Parties are fully responsible for their technology stack selection, software lic
 Key technology architecture requirements:
 
 - Cloud hosting shall use GovTech-approved providers with data centres within Sri Lanka (refer to [ARC-003: Cloud and Hosting Policy](ARC-003_Cloud_Hosting_Policy.md))
-- Containerisation using Docker is mandatory for all new deployments; orchestration shall use Kubernetes
+- Containerisation using OCI-compliant container images is mandatory for all new deployments; orchestration shall use a CNCF-conformant container-orchestration platform
 - All APIs shall be registered with and routed through the GovTech API Gateway
 - Infrastructure shall be defined as code (IaC); parties select their own IaC tooling
 - All systems shall integrate with the GovTech National Operations Centre (NOC) for centralised logging, monitoring, and alerting
+
+Consistent with GOV-001 Section 3.4, GovTech specifies the required capability or open standard, not a named product. GovTech publishes recommended default implementations, for example Docker and Kubernetes, on the GTSL; parties may select any conformant alternative.
 
 > **Extension Point: Technology Stack**
 >
@@ -227,12 +239,14 @@ GovTech operates a four-tier national digital platform. All government systems s
 
 | Tier | Layer | Key Components |
 |---|---|---|
-| **Tier 1** | Citizen Experience | GovPortal, GovApp (mobile), eServices Gateway, multilingual interfaces |
-| **Tier 2** | Shared Services | SL-UDI (identity), GovPay (payments), GovNotify (notifications), GovSign (e-signature) |
+| **Tier 1** | Citizen Experience | National web portal, mobile app, e-services gateway, multilingual interfaces |
+| **Tier 2** | Shared Services | SL-UDI (identity), GovPay (payments), E-Locker (document vault), DigiSign (e-signature) |
 | **Tier 3** | Data and Integration | NDX (data exchange), API Gateway, Event Bus, Master Data Registry |
-| **Tier 4** | Infrastructure | GovCloud, Container Platform (Kubernetes), Network Fabric, Security Operations |
+| **Tier 4** | Infrastructure | Government cloud, container platform, network fabric, security operations |
 
 ### 5.2 Mandatory Building Block Integration
+
+GovTech's national building blocks implement the Digital Public Infrastructure (DPI) layer of the Digital Economy Blueprint. SL-UDI provides the Unique Digital Identity, GovPay provides Digital Payments, and NDX provides the National (Federated) Data Exchange for secure, consent-driven data flow across government agencies and approved private entities. Integration shall follow the Blueprint's open API principles of discoverability, standardisation, and governance, and its microservices architecture. Detailed conformance requirements are defined in SEC-005 (SL-UDI), ARC-005 (GovPay and NDX), and DAT-003 (NDX).
 
 The following building blocks are mandatory. Implementing parties are responsible for integrating with each applicable building block and for producing and maintaining all integration documentation.
 
@@ -280,20 +294,22 @@ NDX is the mandatory platform for all data exchange between government agencies.
 
 GovTech adopts the following international standards and frameworks. Implementing parties are responsible for understanding, applying, and documenting their compliance with each relevant standard. GovTech sets the requirement; parties own the implementation.
 
-| Standard | Domain | Compliance Level | Extension Point |
+| Standard | Domain | Enforcement Level | Extension Point |
 |---|---|---|---|
-| TOGAF 10 | Enterprise Architecture | Adopted (adapted) | Parties may use an alternative EA framework (e.g., Zachman, FEAF) with documented mapping to TOGAF concepts and prior written approval |
+| TOGAF 10 | Enterprise Architecture | Mandatory (adapted) | Parties may use an alternative EA framework (e.g., Zachman, FEAF) with documented mapping to TOGAF concepts and prior written approval |
 | ISO/IEC 27001:2022 | Information Security | Mandatory | Equivalent certification (e.g., SOC 2 Type II) may be accepted with prior approval and a gap assessment |
 | NIST CSF 2.0 | Cybersecurity | Mandatory | Alternative risk frameworks accepted with documented mapping to NIST CSF outcomes and prior approval |
-| OWASP ASVS 4.0 | Application Security | Mandatory (Level 2 minimum) | Higher ASVS level required for systems processing sensitive data; no lower level is permitted |
+| OWASP ASVS 4.0 | Application Security | Mandatory (Level 2 minimum) | ASVS Level 3 is required at Impact Level 3 and above; no level below 2 is permitted |
 | OpenAPI 3.1 | API Specification | Mandatory | No extension permitted: OpenAPI 3.1 is the sole accepted API specification format |
-| WCAG 2.1 AA | Accessibility | Mandatory | Higher conformance (AAA) is encouraged; no lower level is permitted |
+| WCAG 2.1 AA | Accessibility | Mandatory | Higher conformance (AAA) is recommended; no lower level is permitted |
 | OAuth 2.0 / OIDC | Identity and Auth | Mandatory | No extension permitted for citizen-facing authentication |
-| ISO 22301 | Business Continuity | Mandatory (Tier 1 systems) | Tier 2 and below systems may use a simplified BCP framework with prior written approval |
+| ISO 22301 | Business Continuity | Mandatory (Impact Level 3+) | Impact Level 1 and 2 systems may use a simplified business-continuity plan with prior written approval |
 
 ---
 
 ## 7. Governance and Compliance
+
+EARM compliance is a condition of procurement and budget approval. Consistent with GOV-001 Section 3.3, the implementing party's commitment to meet Gate 1 shall be established at the procurement stage and recorded under VAP-005. No procurement award or budget release for a government digital system shall proceed without this commitment. Procurement evaluation criteria are defined in VAP-002 and POL-004.
 
 ### 7.1 Architecture Review Process
 
@@ -323,7 +339,7 @@ Required submission artefacts:
 
 > **Extension Point: Review Process**
 >
-> For low-risk, internal-only systems, a party may request a simplified single-gate review process. The request shall classify the system risk profile with supporting justification. Prior written approval from the Architecture Review Board is required before the simplified process is applied.
+> For Impact Level 1 systems that are not citizen-facing and have no inter-agency integration, a party may request a simplified single-gate review process. The request shall classify the system Impact Level with supporting justification. Prior written approval from the Architecture Review Board is required before the simplified process is applied.
 
 ### 7.2 Ongoing Compliance
 
@@ -365,7 +381,7 @@ Where a system cannot meet a specific EARM requirement, a formal Architecture Wa
 | Data Product | A curated, documented, and published dataset available via NDX |
 | Building Block | A reusable, shared platform capability operated by GovTech (SL-UDI, GovPay, NDX, and equivalents) |
 | Architecture Waiver | A time-limited, documented exception to a specific EARM requirement |
-| GovCloud | The government-approved cloud hosting environment within Sri Lanka's territorial jurisdiction |
+| Government cloud | The government-approved cloud hosting environment within Sri Lanka's territorial jurisdiction |
 | GTSL | Government Technology Standards List: the biannual approved technology list |
 | NOC | National Operations Centre: GovTech's centralised monitoring and incident response function |
 | eKYC | Electronic Know Your Customer: digital identity verification via SL-UDI |
@@ -386,8 +402,13 @@ Where a system cannot meet a specific EARM requirement, a formal Architecture Wa
 | ARC-005 | NDX and GovPay Integration Standards | Planned | Child standard |
 | ARC-006 | Disaster Recovery and Business Continuity | Planned | Child standard |
 | SEC-001 | Information Security Policy | Planned | Referenced |
+| SEC-005 | Identity and Access Management (SL-UDI) | Planned | Referenced |
 | DAT-001 | Data Classification and Handling Policy | Planned | Referenced |
+| DAT-003 | Data Interoperability and Exchange (NDX) | Planned | Referenced |
 | POL-001 | Software Governance Policy | Planned | Referenced |
+| POL-004 | Government Procurement Rules for Software | Planned | Referenced |
+| VAP-002 | RFP Evaluation Framework | Planned | Referenced |
+| VAP-005 | Approval and Sign-off Workflow | Planned | Referenced |
 
 ---
 

@@ -7,7 +7,7 @@
 **Pillar:** Apex  
 **Issued By:** GovTech Sri Lanka (Pvt) Ltd., Standards and Policy Division  
 **Date:** May 2026  
-**Aligned With:** Sri Lanka 2030 Digital Blueprint  
+**Aligned With:** Sri Lanka's Digital Economy Blueprint  
 
 ---
 
@@ -27,7 +27,7 @@ GovTech Sri Lanka (Pvt) Ltd. is the Government of Sri Lanka's lead implementatio
 - Approve all third-party vendor implementations from initial proposal through to production deployment.
 - Conduct equivalent reviews and approvals for all GovTech internal implementations against the same standards.
 - Operate the national shared digital platforms (SL-UDI, GovPay, NDX, and related building blocks).
-- Drive Sri Lanka's **2030 Digital Blueprint**, ensuring every policy decision, standard, and approval accelerates the nation's digital transformation.
+- Drive Sri Lanka's **Digital Economy Blueprint**, ensuring every policy decision, standard, and approval accelerates the nation's digital transformation.
 
 GovTech's governance scope covers every government ministry, department, statutory body, state-owned enterprise, and third-party vendor that builds, operates, or integrates with any government digital system.
 
@@ -210,9 +210,9 @@ Requires all government digital services to be accessible, multilingual, and usa
 
 ---
 
-### Pillar 8: 2030 Blueprint Alignment
+### Pillar 8: Digital Economy Blueprint Alignment
 
-Tracks and enforces alignment of all government digital initiatives with Sri Lanka's 2030 Digital Blueprint milestones.
+Tracks and enforces alignment of all government digital initiatives with the Digital Economy Blueprint milestones.
 
 | Doc ID | Title | Status |
 |---|---|---|
@@ -244,7 +244,33 @@ Any system architecture that bypasses or replicates any of these building blocks
 
 All government ministries, departments, statutory bodies, and third-party vendors building or operating government digital systems are bound by this Master Governance Policy and all child documents applicable to their system.
 
-### 6.2 Non-Compliance
+### 6.2 System Impact Classification
+
+Every government digital system shall be assigned a System Impact Level. The Impact Level reflects the consequence of a breach of the system's confidentiality, integrity, or availability. GovTech adopts the national impact model defined in the ICTA Information Classification Policy for Government Organizations.
+
+| Impact Level | Designation | Consequence of compromise |
+|---|---|---|
+| **1** | Low (negligible) | Affects a single line of business or a specific service. |
+| **2** | Medium (moderate) | Affects several areas of activity of the organisation. |
+| **3** | High (severe) | Significantly affects services essential to the population, or the rights and privacy of individuals. |
+| **4** | Very High (very serious) | Prevents delivery of one or more essential services, or endangers the rights, health, or life of individuals. |
+
+A system's Impact Level is the highest level it reaches on any of the three criteria: confidentiality, integrity, or availability. A system that is citizen-facing, or that exchanges data across agencies, shall be classified at Impact Level 3 or above unless GovTech approves a lower level in writing. The confidentiality dimension follows the data-classification model defined in DAT-001.
+
+### 6.3 Enforcement Levels
+
+Every requirement in a GovTech document carries an Enforcement Level that states the obligation and the systems it binds. Authors shall tag each requirement using these terms.
+
+| Enforcement Level | Obligation term | Meaning |
+|---|---|---|
+| **Mandatory** | shall / shall not | Binding. The applicable Impact Levels are stated with the requirement; where none are stated, the requirement binds all systems. |
+| **Recommended** | should | Expected unless a documented reason justifies a different approach. |
+| **Optional** | may | Permitted at the party's discretion. |
+| **Prohibited** | must not | Absolute prohibition, applied for safety-critical reasons. |
+
+A requirement may bind at a higher Enforcement Level as the system Impact Level rises. A control may be Recommended at Impact Level 1 and 2 and Mandatory at Impact Level 3 and 4. A standard that GovTech has adopted but that is under active international revision shall additionally be marked **[Watch]**. Watch-listed standards are reviewed more often than the annual cycle, so that parties are alerted before a revision takes effect.
+
+### 6.4 Non-Compliance
 
 GovTech may respond to non-compliance with any of the following actions, depending on severity:
 
@@ -253,7 +279,7 @@ GovTech may respond to non-compliance with any of the following actions, dependi
 - Escalation to the relevant ministry secretary or procurement authority.
 - Public reporting in GovTech's annual governance report.
 
-### 6.3 Deviation Register
+### 6.5 Deviation Register
 
 GovTech maintains a central Deviation Register recording all approved Extension Point deviations across all systems. The register shall be reviewed quarterly by the Architecture Review Board and published annually in summary form.
 
@@ -277,12 +303,13 @@ GovTech maintains a central Deviation Register recording all approved Extension 
 
 This document is the parent of all documents listed in Section 4. The following external references informed this framework:
 
-- Sri Lanka 2030 Digital Blueprint (Government of Sri Lanka)
+- Sri Lanka's Digital Economy Blueprint (Government of Sri Lanka)
 - Personal Data Protection Act, Sri Lanka
 - TOGAF 10, The Open Group Architecture Framework
 - ISO/IEC 27001:2022, Information Security Management
 - NIST Cybersecurity Framework 2.0
 - OWASP Application Security Verification Standard 4.0
+- ICTA Information Classification Policy for Government Organizations (source of the System Impact Classification model in Section 6.2)
 
 ---
 

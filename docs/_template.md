@@ -8,7 +8,7 @@
 **Parent Document:** [GOV-001: GovTech Master Governance Policy](Master_Governance_Policy.md)  
 **Issued By:** GovTech Sri Lanka (Pvt) Ltd., Standards and Policy Division  
 **Date:** <Month YYYY>  
-**Aligned With:** Sri Lanka 2030 Digital Blueprint  
+**Aligned With:** Sri Lanka's Digital Economy Blueprint  
 
 ---
 
@@ -19,7 +19,7 @@
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
-2. [Strategic Context: Sri Lanka 2030 Digital Blueprint](#2-strategic-context-sri-lanka-2030-digital-blueprint)
+2. [Strategic Context: Sri Lanka's Digital Economy Blueprint](#2-strategic-context-sri-lankas-digital-economy-blueprint)
 3. [Principles](#3-principles)
 4. [Requirements](#4-requirements)
 5. [Governance and Compliance](#5-governance-and-compliance)
@@ -53,9 +53,9 @@ Define only terms specific to this document. Common terms (SL-UDI, GovPay, NDX, 
 
 ---
 
-## 2. Strategic Context: Sri Lanka 2030 Digital Blueprint
+## 2. Strategic Context: Sri Lanka's Digital Economy Blueprint
 
-State how this document advances the Blueprint pillars (Digital Infrastructure, Digital Government, Digital Economy, Digital Society, Cybersecurity). Flag any deliverables, milestones, or shared building blocks this document directly supports.
+State how this document advances the Digital Economy Blueprint. Identify which layer it supports (Digital Infrastructure; Digital Public Infrastructure; platforms and applications; or user touchpoints) and which enablers it serves (inclusion; policy, legislation and institutions; trust and governance; capacity building and sustainability). Flag any deliverables, milestones, or shared building blocks this document directly supports.
 
 ---
 

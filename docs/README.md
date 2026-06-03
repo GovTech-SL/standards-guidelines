@@ -1,7 +1,7 @@
 # GovTech Sri Lanka (Pvt) Ltd.: Standards and Guidelines Repository
 
 **Maintained by:** Standards and Policy Division  
-**Aligned With:** Sri Lanka 2030 Digital Blueprint  
+**Aligned With:** Sri Lanka's Digital Economy Blueprint  
 
 ---
 
@@ -66,7 +66,7 @@ docs/
 │   ├── INC-003_Mobile_First_Low_Bandwidth_Guidelines.md
 │   └── INC-004_Digital_Literacy_User_Onboarding_Standards.md
 │
-└── blueprint/                                 ← Pillar 8: 2030 Blueprint Alignment
+└── blueprint/                                 ← Pillar 8: Digital Economy Blueprint Alignment
     ├── BLU-001_Digital_Transformation_Readiness_Assessment.md
     ├── BLU-002_Shared_Platform_Common_Building_Blocks_Policy.md
     ├── BLU-003_Legacy_System_Sunset_Migration_Guidelines.md

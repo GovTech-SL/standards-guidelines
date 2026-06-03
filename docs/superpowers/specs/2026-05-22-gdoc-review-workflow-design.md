@@ -56,7 +56,7 @@ Six-phase workflow built on three artifacts:
   <Document Title>
   Document ID  ·  Version  ·  Status  ·  Classification  ·  Pillar
   Issued by Standards and Policy Division  ·  Date
-  Aligned with Sri Lanka 2030 Digital Blueprint
+  Aligned with Sri Lanka's Digital Economy Blueprint
 
 [Review banner, coloured background]
   REVIEW DRAFT  ·  Round <N>  ·  Comments due <YYYY-MM-DD>
