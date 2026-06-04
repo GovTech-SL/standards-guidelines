@@ -144,7 +144,7 @@ Establishes the security baseline, compliance requirements, and incident respons
 
 | Doc ID | Title | Status |
 |---|---|---|
-| **SEC-001** | Information Security Policy (ISO 27001) | Planned |
+| **SEC-001** | Information Security Policy (ISO 27001) | Draft |
 | **SEC-002** | Application Security Standard (OWASP ASVS) | Planned |
 | **SEC-003** | Penetration Testing Requirements | Planned |
 | **SEC-004** | Incident Response and Breach Notification | Planned |

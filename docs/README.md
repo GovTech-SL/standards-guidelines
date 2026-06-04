@@ -104,6 +104,7 @@ Changes to any document shall be submitted as a pull request and reviewed by the
 | GOV-001 | GovTech Master Governance Policy | Apex | [/docs/Master_Governance_Policy.md](Master_Governance_Policy.md) |
 | ARC-001 | Enterprise Architecture Reference Model | Architecture | [/docs/architecture/ARC-001...](architecture/ARC-001_Enterprise_Architecture_Reference_Model.md) |
 | DAT-001 | Data Classification and Handling Policy | Data | [/docs/data/DAT-001...](data/DAT-001_Data_Classification_Handling_Policy.md) |
+| SEC-001 | Information Security Policy | Security | [/docs/security/SEC-001...](security/SEC-001_Information_Security_Policy.md) |
 
 ### Planned
 
@@ -125,7 +126,6 @@ Changes to any document shall be submitted as a pull request and reviewed by the
 | VAP-004 | Proof of Concept Guidelines | Vendor Approval |
 | VAP-005 | Approval and Sign-off Workflow | Vendor Approval |
 | VAP-006 | Vendor Performance and SLA Standards | Vendor Approval |
-| SEC-001 | Information Security Policy | Security |
 | SEC-002 | Application Security Standard | Security |
 | SEC-003 | Penetration Testing Requirements | Security |
 | SEC-004 | Incident Response and Breach Notification | Security |
