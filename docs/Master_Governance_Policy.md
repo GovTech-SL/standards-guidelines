@@ -115,7 +115,7 @@ Establishes the legal, regulatory, and policy foundations that all other pillars
 
 | Doc ID | Title | Status |
 |---|---|---|
-| **POL-001** | Software Governance Policy | Planned |
+| **POL-001** | Software Governance Policy | Draft |
 | **POL-002** | Data Sovereignty and Personal Data Protection Act Compliance | Planned |
 | **POL-003** | Open Standards and Vendor Neutrality Policy | Planned |
 | **POL-004** | Government Procurement Rules for Software | Planned |

@@ -105,6 +105,7 @@ Changes to any document shall be submitted as a pull request and reviewed by the
 | ARC-001 | Enterprise Architecture Reference Model | Architecture | [/docs/architecture/ARC-001...](architecture/ARC-001_Enterprise_Architecture_Reference_Model.md) |
 | DAT-001 | Data Classification and Handling Policy | Data | [/docs/data/DAT-001...](data/DAT-001_Data_Classification_Handling_Policy.md) |
 | SEC-001 | Information Security Policy | Security | [/docs/security/SEC-001...](security/SEC-001_Information_Security_Policy.md) |
+| POL-001 | Software Governance Policy | Policy and Legal | [/docs/policy-legal/POL-001...](policy-legal/POL-001_Software_Governance_Policy.md) |
 
 ### Planned
 
@@ -115,7 +116,6 @@ Changes to any document shall be submitted as a pull request and reviewed by the
 | ARC-004 | Microservices and Platform Design Guidelines | Architecture |
 | ARC-005 | NDX and GovPay Integration Standards | Architecture |
 | ARC-006 | Disaster Recovery and Business Continuity | Architecture |
-| POL-001 | Software Governance Policy | Policy and Legal |
 | POL-002 | Data Sovereignty and PDPA Compliance | Policy and Legal |
 | POL-003 | Open Standards and Vendor Neutrality Policy | Policy and Legal |
 | POL-004 | Government Procurement Rules for Software | Policy and Legal |
