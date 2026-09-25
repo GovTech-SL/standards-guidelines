@@ -16,6 +16,7 @@ standards-guidelines/
 ├── security/
 ├── data/
 ├── engineering/
+├── service-management/
 ```
 
 Folders will be added as new areas of organisation-wide technology standards and guidelines emerge.
@@ -83,6 +84,7 @@ ENG-001-development-guidelines.md
 | `SEC`  | Security           |
 | `DAT`  | Data               |
 | `ENG`  | Engineering        |
+| `SVC`  | Service Management |
 
 New prefixes may be introduced when a new domain is established.
 
