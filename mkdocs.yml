@@ -1,0 +1,21 @@
+site_name: GovTech Sri Lanka Technology Standards
+site_description: Standards and Guidelines Repository
+site_url: https://govtech-sl.github.io/standards-guidelines/
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Architecture:
+      - ARC-001 Architecture Document Guidelines: architecture/ARC-001-architecture-document-guidelines.md
+  - Service Management:
+      - SVC-001 SLA and Acceptance Criteria: service-management/SVC-001-sla-and-acceptance-criteria.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
