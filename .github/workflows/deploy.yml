@@ -3,7 +3,7 @@ name: Deploy Documentation
 on:
   push:
     branches:
-      - technology-standards
+      - main
 
 permissions:
   contents: read

@@ -1,4 +1,4 @@
-## **SLA Parameters and Minimum Acceptance Criteria**
+## **Minimum SLA and Support Requirements for Technology Services**
 
 Document ID: SVC-001<br>
 Status: Active<br>
