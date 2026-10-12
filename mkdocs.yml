@@ -4,6 +4,8 @@ site_url: https://govtech-sl.github.io/standards-guidelines/
 
 theme:
   name: material
+  logo: assets/govtech-logo.svg
+  favicon: assets/govtech-favicon.png
 
 nav:
   - Home: index.md
