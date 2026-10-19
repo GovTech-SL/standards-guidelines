@@ -1,8 +1,9 @@
-**Sri Lanka Digital Government UX and**  
-**Service Design Guidelines**  
-**V 1.0**
+# UX and Service Design Guidelines
 
-# Sri Lanka Digital Government UX and Service Design Guidelines
+**Document ID:** UI-001<br>
+**Status:** Draft<br>
+**Version:** 1.0<br>
+**Last Updated:** 2026-10-19
 
 ## Whole-of-government guidance for designing, building and assuring public digital services
 
