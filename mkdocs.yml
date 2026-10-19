@@ -13,6 +13,8 @@ nav:
       - ARC-001 Architecture Document Guidelines: architecture/ARC-001-architecture-document-guidelines.md
   - Service Management:
       - SVC-001 SLA and Acceptance Criteria: service-management/SVC-001-sla-and-acceptance-criteria.md
+  - UI / UX:
+      - UI-001 UX and Service Design Guidelines: ui-ux/UI-001-ux-and-service-design-guidelines.md
 
 plugins:
   - search

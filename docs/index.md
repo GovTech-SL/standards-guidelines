@@ -13,3 +13,7 @@ These standards establish common practices and expectations for technology archi
 ### Service Management
 
 - [SVC-001 SLA and Acceptance Criteria](service-management/SVC-001-sla-and-acceptance-criteria.md)
+
+### UI / UX
+
+- [UI-001 UX and Service Design Guidelines](ui-ux/UI-001-ux-and-service-design-guidelines.md)

@@ -12,11 +12,13 @@ Project-specific standards, designs, implementation documents and other project 
 standards-guidelines/
 │
 ├── README.md
-├── architecture/
-├── security/
-├── data/
-├── engineering/
-├── service-management/
+├── docs/
+│   ├── architecture/
+│   ├── security/
+│   ├── data/
+│   ├── engineering/
+│   ├── service-management/
+│   └── ui-ux/
 ```
 
 Folders will be added as new areas of organisation-wide technology standards and guidelines emerge.
@@ -42,6 +44,7 @@ Examples include:
 * Data standards
 * Engineering standards
 * SLA guidelines
+* UI / UX and service design guidelines
 * Organisation-wide technology practices
 
 ## What Does Not Belong Here
@@ -74,6 +77,7 @@ ARC-001-architecture-guidelines.md
 SEC-001-security-guidelines.md
 DAT-001-data-management-guidelines.md
 ENG-001-development-guidelines.md
+UI-001-ux-and-service-design-guidelines.md
 ```
 
 ### Document Prefixes
@@ -85,6 +89,7 @@ ENG-001-development-guidelines.md
 | `DAT`  | Data               |
 | `ENG`  | Engineering        |
 | `SVC`  | Service Management |
+| `UI`   | UI / UX            |
 
 New prefixes may be introduced when a new domain is established.
 
